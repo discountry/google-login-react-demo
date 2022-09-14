@@ -1,6 +1,6 @@
 # Google login react demo 
 
-Sample useage of **Sign in with google** 
+Sample usage of **Sign in with google** 
 
 [https://developers.google.com/identity/gsi/web?hl=en](https://developers.google.com/identity/gsi/web?hl=en)
 
