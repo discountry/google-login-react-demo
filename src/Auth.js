@@ -1,6 +1,7 @@
 import { useScript } from "./hooks";
 import { useRef, useState } from "react";
 import axios from "axios";
+import { CLIENT_ID } from "./ids";
 
 const Auth = () => {
   const googleOauthRef = useRef();
@@ -38,8 +39,7 @@ const Auth = () => {
 
   useScript("https://accounts.google.com/gsi/client", () => {
     googleOauthRef.current = window.google.accounts.oauth2.initTokenClient({
-      client_id:
-        "685280315987-pl939akl077dgaek83e97mu29cjd8ctb.apps.googleusercontent.com",
+      client_id: CLIENT_ID,
       scope: `profile email`,
       callback: "", // defined at request time
     });

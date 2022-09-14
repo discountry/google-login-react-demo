@@ -1,6 +1,7 @@
 import React, { useState, useRef } from "react";
 import jwt_deocde from "jwt-decode";
 import { useScript } from "./hooks";
+import { CLIENT_ID } from "./ids";
 
 const Login = () => {
   const googlebuttonref = useRef();
@@ -18,8 +19,7 @@ const Login = () => {
 
   useScript("https://accounts.google.com/gsi/client", () => {
     window.google.accounts.id.initialize({
-      client_id:
-        "685280315987-pl939akl077dgaek83e97mu29cjd8ctb.apps.googleusercontent.com", // here's your Google ID
+      client_id: CLIENT_ID, // here's your Google ID
       callback: onGoogleSignIn,
       auto_select: false,
     });
